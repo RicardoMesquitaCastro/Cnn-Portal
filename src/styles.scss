@@ -1,0 +1,30 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+  padding:0;
+  margin:0;
+  vertical-align:baseline;
+  list-style:none;
+  border:0
+  }
+
+
+
+   :root {
+    ---color-primary: #C42D34 ;
+    ---color-font-ligth: #fff ;
+    ---color-font-dark: #000;
+    ---color-hover-ligth: #cacaca;
+    ---color-small: #838383;
+    ---color-grey: #E7E2DF;
+
+  }
+
+  small{
+    color: var(---color-small);
+  }
+
+  a{
+    text-decoration: none;
+  }
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';

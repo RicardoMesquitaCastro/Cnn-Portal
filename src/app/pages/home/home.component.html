@@ -1,0 +1,54 @@
+<app-navbar></app-navbar>
+<section>
+  <div class="container">
+  <article>
+    <figure class="primary">
+        <a [routerLink]="['noticia']">
+            <img src="https://s2.glbimg.com/QSov_8NI98v0IxxmVGkdXkz2ZMg=/0x86:860x570/810x456/smart/filters:max_age(3600)/https://i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2022/S/i/ivOItBT8GiCAqLZjA9Fg/imagem-materia.jfif" alt="abc" class="rounded">
+            <figcaption class="h3 primaryNotices glass">
+              Congresso discute alternativa ao orçamento secreto após veto do STF
+            </figcaption>
+        </a>
+    </figure>
+
+    <figure class="secondary">
+        <a>
+            <img src="https://s2.glbimg.com/xJQlfrqpjPnHELDSMYFIMzXKh7o=/0x0:3282x2443/1008x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2022/E/0/45XAN6TnqkLQEBGYEaEg/2022-12-19t165008z-1771555997-rc2csd9pvdhc-rtrmadp-3-peru-archaeology-nazca-23.jpg" alt="abc" class="rounded">
+            <figcaption class="h3 Allnotices glass">
+              Novas figuras misteriosas das linhas de Nazca são encontradas no Peru
+            </figcaption>
+        </a>
+    </figure>
+
+
+    <figure class="tertiary">
+        <a>
+            <img src="https://s2.glbimg.com/NOzYzbnPXOzi2Pfkg4JwLhMyy1M=/0x0:1059x594/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2022/y/1/jB3M36Quq31nxhoVkAqQ/messi-taca.jpg" alt="abc" class="rounded">
+            <figcaption class="h3 Allnotices glass">
+              Argentina decreta feriado nacional para receber Messi e os outros heróis campeões do mundo
+            </figcaption>
+        </a>
+    </figure>
+
+</article>
+</div>
+</section>
+
+<section class="notices">
+  <div class="container">
+    <div class="card" *ngFor="let notice of notices">
+      <img src="https://s2.glbimg.com/nKu1gH4FyByovB7Moq7VMV2peVA=/0x0:2833x1889/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2021/9/Y/xeXYBgTv6ytUBHYa9pcg/ap21089769020816.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-tittle">Mundo</h5>
+        <p class="card-text">Comitê que investiga invasão ao Capitólio recomenda abertura de processo contra Donald Trump</p>
+        <div class="info-card">
+          <small><strong>Por Capitão America</strong> </small>
+          <small> <strong>Publicado em: </strong>20/12/2022 às 22:00 </small>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<app-footer></app-footer>

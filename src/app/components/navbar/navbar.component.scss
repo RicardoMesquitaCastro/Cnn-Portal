@@ -1,0 +1,44 @@
+.navbar{
+  background: var(---color-primary);
+  padding: 1rem 0rem;
+  .container{
+      display: flex;
+      justify-content: space-between;
+    }
+      .navbar-brand{
+
+        img{
+          width: 150px;
+        }
+      }
+      .nav-item{
+        .nav-link{
+          color: var(---color-font-ligth);
+          cursor: pointer;
+          transition: all 0.3s;
+          &:hover{
+              color: var(---color-hover-ligth) ;
+          }
+        }
+      }
+
+      .input-group{
+        width: initial;
+
+        input{
+          width: 70%;
+
+          &:focus{
+            background-color: #fff;
+            border-color: none;
+            outline: 0;
+            box-shadow:none;
+          }
+        }
+        button{
+          background: var(---color-font-ligth);
+        }
+      }
+
+
+}

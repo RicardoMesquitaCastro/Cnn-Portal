@@ -1,0 +1,32 @@
+section{
+margin-top: 2rem 0rem ;
+
+.header_notice{
+  :first-child{
+    margin-bottom: 0.7rem;
+  }
+  .body_header_notice{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .info_notice{
+    display: flex;
+    flex-direction: column;
+    span{
+      margin: 0;
+        }
+        small{
+          color: var(---color-small);
+        }
+      }
+      .social_media{
+        a{
+          margin: 0 8px;
+          i{
+            font-size: 20px;
+          }
+        }
+      }
+    }
+  }
+}

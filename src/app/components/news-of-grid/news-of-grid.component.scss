@@ -1,0 +1,116 @@
+@media only screen and (min-width: 768px) {
+  article {
+    margin-top: 35px;
+    display: grid;
+    grid-template-areas:
+      "primary primary secondary secondary"
+      "primary primary secondary secondary"
+      "primary primary tertiary tertiary"
+      "primary primary tertiary tertiary";
+    grid-gap: 10px;
+    padding: 10px;
+  }
+
+  .primary {
+    grid-area: primary;
+  }
+
+  .secondary {
+    grid-area: secondary;
+  }
+
+  .tertiary {
+    grid-area: tertiary;
+  }
+}
+
+.h3 {
+  font-family: Poppins-Bold;
+  margin: 0px;
+}
+
+
+article figure img {
+  height: 100%;
+  width: 100%;
+}
+
+figure {
+  margin: 0 0 0.3rem;
+}
+
+article figure {
+  position: relative;
+}
+
+article figure figcaption {
+  position: absolute;
+  bottom: 0;
+  /*background: rgb(0, 0, 0);
+  /* Fallback color */
+  /*background: rgba(0, 0, 0, 0);
+  /* Black background with 0.5 opacity */
+  color: #f1f1f1;
+}
+
+.primaryNotices {
+  width: 100%;
+  font-size: 1.4rem;
+  padding: 20px;
+}
+
+img {
+  object-fit: cover;
+}
+
+.Allnotices {
+  width: 100%;
+  font-size: 1.4rem;
+  padding: 20px;
+}
+
+.glass {
+  background: rgba(6, 6, 6, 0.63);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(1.5px);
+  -webkit-backdrop-filter: blur(1.5px);
+}
+
+article figure figcaption:hover {
+  color: #f9b333;
+  transition: all 0.3s;
+}
+
+.notices{
+  margin-top: 2rem;
+  .card{
+    width: 55%;
+    flex-direction: row;
+    border: none;
+    transition: all 0.3s ;
+    height: 200px;
+    margin-bottom: 2rem;
+    &:hover{
+      -webkit-box-shadow: -3px -1px 9px 0px rgba(0,0,0,0.75);
+      -moz-box-shadow: -3px -1px 9px 0px rgba(0,0,0,0.75);
+      box-shadow: -3px -1px 9px 0px rgba(0,0,0,0.75);
+
+    }
+    img{
+      width: 297px;
+      height: 174px;
+    }
+
+    .card-body{
+      p{
+        margin-bottom: 0.5rem;
+      }
+      .info-card{
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+}
+
+
