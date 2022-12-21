@@ -1,0 +1,35 @@
+<app-navbar></app-navbar>
+
+<section>
+  <div class="container">
+<app-title [title] = "title"></app-title>
+<a class="link_main_news">
+<div class="main_news">
+  <div class="header_news">
+    <img [src]="contents[0]?.image" alt="">
+  </div>
+  <div class="body_news">
+    <h2>{{contents[0]?.title}}</h2>
+    <p>{{contents[0]?.subtitle}}</p>
+  </div>
+</div>
+</a>
+  <div class="row">
+    <div class="col-8">
+      <ng-container *ngFor = "let content of contents">
+        <div class="card_notice">
+          <img [src]="content?.image" alt="">
+          <div class="info_notice">
+            <h4>{{content?.title}}</h4>
+            <p>{{content?.subtitle}}</p>
+          </div>
+        </div>
+      </ng-container>
+
+    </div>
+    <div class="col-3"></div>
+  </div>
+  </div>
+</section>
+
+<app-footer></app-footer>

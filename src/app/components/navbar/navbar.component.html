@@ -4,24 +4,11 @@
       <img [src] ="settings.logo" [alt]="'logo' + settings.full_name">
     </a>
       <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Cidades</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Eduação e Cultura</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link ">Economia</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link">Segurança</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link">Política</a>
-        </li>
+        <ng-container *ngFor="let page of pages" >
+          <li class="nav-item">
+            <a class="nav-link" (click)="navigateSection(page.name)">{{page?.name}}</a>
+          </li>
+        </ng-container>
       </ul>
       <div class="social_media">
         <a href="settings.facebook_url"><i class="bi bi-facebook"></i> </a>

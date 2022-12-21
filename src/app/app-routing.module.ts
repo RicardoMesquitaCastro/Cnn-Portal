@@ -8,6 +8,8 @@ const routes: Routes = [
 
 { path: 'detalhes', loadChildren: () => import('./pages/detalhes/detalhes.module').then(m => m.DetalhesModule) },
 
+{ path: 'cnn', loadChildren: () => import('./pages/cnn/cnn.module').then(m => m.CnnModule) },
+
 ]
 
 

@@ -4,6 +4,8 @@ import { LocalStorageService } from '../../services/local-storage.service';
 import { settingsModel } from 'src/app/models/settings.model';
 import { forkJoin } from 'rxjs';
 import { PagesService } from '../../services/pages.service';
+import { PagesModel } from '../../models/pages.model';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-footer',
@@ -14,14 +16,9 @@ import { PagesService } from '../../services/pages.service';
 export class FooterComponent implements OnInit {
 
   settings!: settingsModel
-  pages = [
-    {name: "Home"},
-    {name: "Cidades"},
-    {name: "Educação e Cultura"},
-    {name: "Economia"},
-    {name: "Segurança"},
-    {name: "Política"},
-  ]
+  pages:  Array<PagesModel> = [];
+  apiStorage =  environment.apiStorageUrl
+
   constructor(
     private SettingsService: SettingsService,
     private LocalStorageService: LocalStorageService,
@@ -42,10 +39,14 @@ export class FooterComponent implements OnInit {
       pages: this.PagesService.getPages()
 
     }).subscribe((res:any) => {
-      console.log(res)
+      this.pages = res.pages.data;
+      this.settings = res.settings.data;
 
     }), (error:any) => {
       console.log(error)
     }
+  }
+  public getYear(): string {
+    return `${new Date().getFullYear()}`;
   }
 }
