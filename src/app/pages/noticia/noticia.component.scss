@@ -1,7 +1,13 @@
 section{
 margin-top: 2rem 0rem ;
+margin-top: 2rem;
+img {
+  margin-bottom: 20px;
+  width: 300px;
+}
 
 .header_notice{
+  width: 700px;
   :first-child{
     margin-bottom: 0.7rem;
   }
@@ -29,4 +35,53 @@ margin-top: 2rem 0rem ;
       }
     }
   }
+  .body_notice{
+    p{
+      font-size: 15px;
+    }
+    margin: 2rem 0rem;
+    text-align: justify;
+    width: 700px;
+    .img_notice{
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    img{
+      width: 700px;
+    }
+
+  }
+  .ads_img{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    img{
+      width: 600px;
+      height: 100px;
+    }
+  }
+
+  .aside{
+    .ads{
+      margin-bottom: 2rem;
+    }
+    .all_notices{
+    a{
+    text-decoration: none !important;
+    color: #000;
+    width: 100%;
+    font-weight: bold;
+    font-size: 15px;
+
+    }
+  }
+}
+@media (min-width: 1200px){
+h2, .h2 {
+    font-size: 3rem;
+}
+}
 }
