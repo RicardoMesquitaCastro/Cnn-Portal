@@ -113,4 +113,70 @@ article figure figcaption:hover {
   }
 }
 
+.newsletter_container {
+  background: var(---color-small);
+  padding: 45px 0px 45px 0px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
+  h4 {
+    font-size: 20px;
+    width: 50%;
+    color: black;
+    font-family: Inter-Bold;
+    margin-bottom: 1rem;
+  }
+
+  h2 {
+    font-size: 18px;
+    width: 50%;
+    color: black;
+    font-family: Inter-Regular;
+    margin-bottom: 1rem;
+  }
+
+  button {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1rem;
+  }
+
+  .row {
+    width: 65%;
+  }
+
+
+
+  .input-group {
+    width: 55%;
+    padding-left: 0px;
+  }
+
+  @media(max-width: 799.97px) {
+    .inputs {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+
+      input {
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+    }
+
+  }
+
+  small {
+    margin-top: 1rem;
+    color: black;
+    font-size: 15px;
+    font-family: Inter-Regular;
+
+  }
+
+  a{
+    color: var(---color-primary);
+  }
+}
