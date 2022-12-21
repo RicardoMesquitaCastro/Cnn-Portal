@@ -1,6 +1,7 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { settingsModel } from 'src/app/models/settings.model';
 import { SettingsService } from '../../services/settings.service';
+import { LocalStorageService } from '../../services/local-storage.service';
 
 @Component({
   selector: 'app-navbar',
@@ -11,7 +12,8 @@ import { SettingsService } from '../../services/settings.service';
 export class NavbarComponent implements OnInit {
   settings!: settingsModel
   constructor(
-    private SettingsService: SettingsService
+    private SettingsService: SettingsService,
+    private LocalStorageService: LocalStorageService
   ) { }
 
   ngOnInit(): void {
@@ -21,7 +23,9 @@ export class NavbarComponent implements OnInit {
   getSettings(){
     this.SettingsService.getSettings().subscribe(
       (response: any) =>{
-        console.log(response)
+        this.settings = response.data
+        this.LocalStorageService.setItem('SETTINGS', this.settings)
+        console.log(this.settings)
       },
       (error: any) => console.log(error)
     )

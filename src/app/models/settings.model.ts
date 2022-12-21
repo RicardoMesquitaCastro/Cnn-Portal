@@ -1,6 +1,6 @@
 export interface settingsModel {
     message: string,
-    data: {
+
         id: number,
         logo: string,
         nif: string,
@@ -63,4 +63,3 @@ export interface settingsModel {
         created_at: Date,
         updated_at: Date
     }
-}

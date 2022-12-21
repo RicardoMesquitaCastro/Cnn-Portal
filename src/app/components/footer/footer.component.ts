@@ -1,4 +1,9 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { SettingsService } from '../../services/settings.service';
+import { LocalStorageService } from '../../services/local-storage.service';
+import { settingsModel } from 'src/app/models/settings.model';
+import { forkJoin } from 'rxjs';
+import { PagesService } from '../../services/pages.service';
 
 @Component({
   selector: 'app-footer',
@@ -7,6 +12,8 @@ import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class FooterComponent implements OnInit {
+
+  settings!: settingsModel
   pages = [
     {name: "Home"},
     {name: "Cidades"},
@@ -15,9 +22,30 @@ export class FooterComponent implements OnInit {
     {name: "Segurança"},
     {name: "Política"},
   ]
-  constructor() { }
+  constructor(
+    private SettingsService: SettingsService,
+    private LocalStorageService: LocalStorageService,
+    private PagesService: PagesService
 
-  ngOnInit(): void {
+  ) {
+
+    // this.settings = this.LocalStorageService.getItem("SETTINGS")
+    // if(Object.keys(this.settings).length === 0){
+    //   this.getSettings();
+    // }
   }
 
+  ngOnInit(): void {
+
+    forkJoin({
+      settings: this.SettingsService.getSettings(),
+      pages: this.PagesService.getPages()
+
+    }).subscribe((res:any) => {
+      console.log(res)
+
+    }), (error:any) => {
+      console.log(error)
+    }
+  }
 }
