@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  apiUrl: "https://local360.com.br/cms/public/api/v1",
+  app: '639dacae7ec2a',
+  production: true
 };
 
 /*
